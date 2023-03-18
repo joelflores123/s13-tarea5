@@ -1,0 +1,287 @@
+:root {
+    --primer-color: #c02122;
+    --segundo-color: #44b09e;
+    --tercer-color: #ffcf3f;
+    --color-base: #e7e9e9;
+    --color-texto: #ffffff;
+    --sombras-letras: #fe4c4a;
+    --sombreado-nav: #6c6f74;
+    --sombreado-nav2: #070000;
+    --texto-oscuro: #b8b3b3;
+    --fuente1-font-family: 'Indie Flower', cursive;
+    --fuente2-font-family: 'Rubik Iso', cursive;
+    --fuente3-font-family: 'Single Day', cursive;
+    --fuente4-font-family: 'Tilt Prism', cursive;
+    --fuente5-font-family: 'Bebas Neue', cursive;
+}
+
+body {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+.columna {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+#hero {
+    min-height: 100vh;
+    position: relative;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1c1c1d;
+    opacity: 0.9;
+    mix-blend-mode: overlay;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 2px;
+    /* height: 70%;*/
+}
+
+@media (max-width: 768px) {
+    .columna {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.titulo h1 {
+    font-size: 3rem;
+    text-align: center;
+    /*margin-bottom: auto;*/
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: var(--fuente2-font-family);
+    text-shadow: 0px 0px 10px #fff, 0px 0px 20px #fff, 0px 0px 30px #fff, 0px 0px 40px #ff00de, 0px 0px 70px #ff00de, 0px 0px 80px #ff00de, 0px 0px 100px #ff00de;
+}
+
+.titulo h1:hover {
+    animation: jump 0.5s infinite alternate;
+    cursor: pointer;
+}
+
+@keyframes jump {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    50% {
+        transform: translate(0, -10px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+.arrow-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* height: 150px;*/
+    padding-top: 20px;
+    /*margin-bottom: 90px;*/
+    position: relative;
+    animation: jump 0.5s infinite alternate;
+}
+
+.arrow {
+    width: 15px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+}
+
+.arrow2 {
+    width: 15px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+}
+
+.arrow3 {
+    width: 15px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+}
+
+.texto-imnagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* margin-top: 50px;
+    margin-bottom: 105px;*/
+    /* Agregamos margen superior */
+}
+
+.texto-imnagen p {
+    font-size: 1.8rem;
+    text-align: center;
+    /*margin-bottom: 80%;*/
+    font-weight: 200;
+    display: inline-flex;
+    color: #ffffff;
+    font-family: var(--fuente5-font-family);
+    /* padding-bottom: 90px;*/
+    /* Agregamos margen izquierdo */
+}
+
+.texto-imnagen img {
+    width: 170px;
+    height: 150px;
+    padding-bottom: 105px;
+    /* Cambiamos a margen derecho */
+}
+
+
+/*.titulo button {
+    display: inline-block;
+    border: none;
+    height: 50px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}*/
+
+.listado-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    gap: 1rem;
+    text-decoration: none;
+    /*margin-bottom: 1rem;*/
+}
+
+.listado-servicios .servicio {
+    background-color: var(--color-texto);
+    padding: 20px;
+    border-radius: 1rem;
+    border: solid 2px rgb(230, 228, 228);
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    border-radius: 10px;
+    transition: transform 250ms ease-in-out, border 250ms ease-in-out, box-shadow 250ms ease-in-out;
+    background: linear-gradient(to bottom, #3a3c4a, #242632);
+    box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.listado-servicios .servicio:hover {
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 58px -16px, rgba(0, 0, 0, 0.72) 0px 30px 22px -10px;
+    transform: scale(1.10);
+    border: 4px solid rgba(249, 249, 249, 0.8);
+    -webkit-transform: scale(1.10);
+    -moz-transform: scale(1.10);
+    -ms-transform: scale(1.10);
+    -o-transform: scale(1.10);
+}
+
+.listado-servicios .item-image {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.listado-servicios .item-image.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition-duration: 300ms;
+    visibility: hidden;
+}
+
+.listado-servicios .servicio:hover .item-image.hover-image {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    visibility: visible;
+    background: #dbdbfb;
+    opacity: 0.9;
+    mix-blend-mode: overlay;
+}
+
+
+/*.servicio-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.servicio.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition-duration: 300ms;
+    visibility: hidden;
+}
+
+.listado-servicios:hover .servicio.hover-image {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    opacity: 1;
+    visibility: visible;
+}*/
+
+.listado-servicios p {
+    color: var(--sombreado-nav);
+    text-align: start;
+    font-family: var(--fuente4-font-family);
+    font-size: 20px;
+}
